@@ -20,8 +20,7 @@ struct BoundingBox {
 };
 
 bool operator<(const BoundingBox &lhs, const BoundingBox &rhs) {
-    return lhs.point1.first < rhs.point1.first; //lhs.classConf < rhs.classConf && lhs.point1 < rhs.point1 && lhs.point2 < rhs.point2;
-}
+    return tie(lhs.classConf, lhs.point1, lhs.point2) < tie(rhs.classConf, rhs.point1, rhs.point2);
 
 /*
 Напишите функцию FindMaxRepetitionCount, принимающую базу прямоугольников и определяющую, 
