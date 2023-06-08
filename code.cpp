@@ -21,7 +21,7 @@ struct BoundingBox {
 
 bool operator<(const BoundingBox &lhs, const BoundingBox &rhs) {
     return tie(lhs.classConf, lhs.point1, lhs.point2) < tie(rhs.classConf, rhs.point1, rhs.point2);
-
+}
 /*
 Напишите функцию FindMaxRepetitionCount, принимающую базу прямоугольников и определяющую, 
 какое максимальное количество повторов (число вхождений одного и того же элемента) она содержит. 
